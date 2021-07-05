@@ -55,7 +55,7 @@ Ext.define('Ors.view.grid.RoutingTimeWindow', {
   },
 
   store: {
-    type: 'k-routingtimewindows'
+    type: 'ors-routingtimewindows'
   },
 
   columns: [
