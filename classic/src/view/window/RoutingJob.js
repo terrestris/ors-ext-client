@@ -26,6 +26,7 @@ Ext.define('Ors.view.window.RoutingJob', {
     'Ext.form.field.TextArea',
     'Ext.form.field.Number',
     'Ext.form.field.Display',
+    'BasiGX.view.component.Map',
     'Ors.view.window.RoutingJobController',
     'Ors.view.grid.RoutingTimeWindow',
     'Ors.view.form.field.GeocodingCombo'

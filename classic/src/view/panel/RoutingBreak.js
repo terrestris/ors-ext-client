@@ -27,6 +27,7 @@ Ext.define('Ors.view.panel.RoutingBreak', {
     'Ext.form.field.ComboBox',
     'Ext.form.field.Display',
     'Ext.button.Button',
+    'BasiGX.view.component.Map',
     'Ors.view.grid.RoutingTimeWindow'
   ],
 

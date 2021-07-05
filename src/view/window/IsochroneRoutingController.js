@@ -22,6 +22,7 @@ Ext.define('Ors.view.window.IsochroneRoutingController', {
 
     requires: [
         'Ext.Object',
+        'BasiGX.view.component.Map',
         'Ors.util.OpenRouteService',
         'Ors.util.Geocoding'
     ],
