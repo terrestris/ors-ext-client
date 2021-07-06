@@ -14,10 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.container.IsochroneRoutingResultController
+ * @class Ors.container.IsochroneRoutingResultController
  */
-Ext.define('Ors.view.container.IsochroneRoutingResultController', {
-  extend: 'Ors.view.container.RoutingResultController',
+Ext.define('Ors.container.IsochroneRoutingResultController', {
+  extend: 'Ors.container.RoutingResultController',
   alias: 'controller.ors-container-isochroneroutingresult',
 
   requires: [
@@ -70,7 +70,7 @@ Ext.define('Ors.view.container.IsochroneRoutingResultController', {
    * gets the color from the feature style.
    *
    * @param {Object} orsIsochrones The response object from ors isochrones api.
-   * @returns {Koala.model.Isochrone[]} Array of isochrone entities.
+   * @returns {Ors.model.Isochrone[]} Array of isochrone entities.
    */
   createIsochrones: function (orsIsochrones) {
     var me = this;
@@ -167,7 +167,7 @@ Ext.define('Ors.view.container.IsochroneRoutingResultController', {
   /**
    * Add the given isochrones to the isochrones store.
    *
-   * @param {Koala.model.Isochrone[]} isochrones The array of isochrones instances.
+   * @param {Ors.model.Isochrone[]} isochrones The array of isochrones instances.
    */
   addIsochrones: function (isochrones) {
     var me = this;
@@ -247,7 +247,7 @@ Ext.define('Ors.view.container.IsochroneRoutingResultController', {
   /**
    * Set the color property for the isochrone model instances.
    *
-   * @param {Koala.model.Isochrone[]} isochrones The isochrones to set the color for.
+   * @param {Ors.model.Isochrone[]} isochrones The isochrones to set the color for.
    */
   setIsochroneModelColors: function (isochrones) {
     var me = this;

@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.FleetRoutingModel
+ * @class Ors.window.FleetRoutingModel
  */
-Ext.define('Ors.view.window.FleetRoutingModel', {
+Ext.define('Ors.window.FleetRoutingModel', {
   extend: 'Ext.app.ViewModel',
   alias: 'viewmodel.ors-window-fleet-routing',
 

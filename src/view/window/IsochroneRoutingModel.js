@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.IsochroneRoutingModel
+ * @class Ors.window.IsochroneRoutingModel
  */
-Ext.define('Ors.view.window.IsochroneRoutingModel', {
+Ext.define('Ors.window.IsochroneRoutingModel', {
   extend: 'Ext.app.ViewModel',
   alias: 'viewmodel.ors-window-isochrone-routing',
 

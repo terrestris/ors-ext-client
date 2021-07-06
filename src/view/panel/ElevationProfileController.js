@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.panel.ElevationProfileController
+ * @class Ors.panel.ElevationProfileController
  */
-Ext.define('Ors.view.panel.ElevationProfileController', {
+Ext.define('Ors.panel.ElevationProfileController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.ors-panel-elevationprofile',
 
@@ -176,7 +176,7 @@ Ext.define('Ors.view.panel.ElevationProfileController', {
      */
     onDataChanged: function(routingSummary) {
         var me = this;
-        var staticMe = Ors.view.panel.ElevationProfileController;
+        var staticMe = Ors.panel.ElevationProfileController;
         var view = me.getView();
         var vm = view.lookupViewModel();
 
@@ -197,7 +197,7 @@ Ext.define('Ors.view.panel.ElevationProfileController', {
      */
     createChart: function() {
         var me = this;
-        var staticMe = Ors.view.panel.ElevationProfileController;
+        var staticMe = Ors.panel.ElevationProfileController;
         var view = me.getView();
         var vm = view.lookupViewModel();
 
@@ -299,7 +299,7 @@ Ext.define('Ors.view.panel.ElevationProfileController', {
     onMouseMove: function(data, chartComponent, chartMargin, limits) {
         var me = this;
         var view = me.getView();
-        var staticMe = Ors.view.panel.ElevationProfileController;
+        var staticMe = Ors.panel.ElevationProfileController;
 
         var xAxis = chartComponent.originalScales.x;
         var svg = view.down('[name=' + view.elevationContainerName + ']').el.dom.getElementsByTagName('svg')[0];
@@ -330,7 +330,7 @@ Ext.define('Ors.view.panel.ElevationProfileController', {
     setIndicatorLine: function(chart, valX, limits) {
         var me = this;
         var view = me.getView();
-        var staticMe = Ors.view.panel.ElevationProfileController;
+        var staticMe = Ors.panel.ElevationProfileController;
 
         var indicatorLineConfig = staticMe.indicatorLine;
 
@@ -466,7 +466,7 @@ Ext.define('Ors.view.panel.ElevationProfileController', {
     clearElevationProfile: function() {
         var me = this;
         var view = me.getView();
-        var staticMe = Ors.view.panel.ElevationProfileController;
+        var staticMe = Ors.panel.ElevationProfileController;
 
         var svg = view.down('[name=' + view.elevationContainerName + ']')
             .el.dom

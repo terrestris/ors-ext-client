@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.form.IsochroneRoutingSettingsController
+ * @class Ors.form.IsochroneRoutingSettingsController
  */
-Ext.define('Ors.view.form.IsochroneRoutingSettingsController', {
+Ext.define('Ors.form.IsochroneRoutingSettingsController', {
   extend: 'Ext.app.ViewController',
   alias: 'controller.ors-form-isochrone-routing-settings',
 

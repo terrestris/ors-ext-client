@@ -21,23 +21,23 @@
 Ext.define('Ors.util.OpenRouteService', {
 
     requires: [
-      'BasiGX.view.component.Map'
+      'Ors.util.Config'
     ],
 
     statics: {
 
         /** @private */
         getApiEndpoint: function() {
-            var config = BasiGX.view.component.Map.guess().appContext.data.merge;
-            if (config.routing && config.routing.openrouteserviceUrl) {
-                return config.routing.openrouteserviceUrl;
+            var config = Ors.util.Config.getRoutingConfig();
+            if (config && config.openrouteserviceUrl) {
+                return config.openrouteserviceUrl;
             }
         },
         /** @private */
         getApiKey: function() {
-            var config = BasiGX.view.component.Map.guess().appContext.data.merge;
-            if (config.routing && config.routing.openrouteserviceApiKey) {
-                return config.routing.openrouteserviceApiKey;
+            var config = Ors.util.Config.getRoutingConfig();
+            if (config && config.openrouteserviceApiKey) {
+                return config.openrouteserviceApiKey;
             }
         },
 

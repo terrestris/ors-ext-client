@@ -14,15 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.IsochroneRoutingController
+ * @class Ors.window.IsochroneRoutingController
  */
-Ext.define('Ors.view.window.IsochroneRoutingController', {
-    extend: 'Ors.view.window.RoutingController',
+Ext.define('Ors.window.IsochroneRoutingController', {
+    extend: 'Ors.window.RoutingController',
     alias: 'controller.ors-window-isochrone-routing',
 
     requires: [
         'Ext.Object',
-        'BasiGX.view.component.Map',
+        'BasiGX.util.Layer',
         'Ors.util.OpenRouteService',
         'Ors.util.Geocoding'
     ],
@@ -88,8 +88,7 @@ Ext.define('Ors.view.window.IsochroneRoutingController', {
         var view = me.getView();
         var vm = view.lookupViewModel();
 
-        var config = BasiGX.view.component.Map.guess().appContext.data.merge;
-        var routingOpts = config.routing;
+        var routingOpts = view.opts;
         vm.set('routingOpts', routingOpts);
         if (!routingOpts) {
             return;

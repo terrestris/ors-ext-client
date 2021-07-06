@@ -20,140 +20,140 @@
  */
 Ext.define('Ors.util.Geocoding', {
 
-    requires: [
-      'BasiGX.view.component.Map'
-    ],
+  requires: [
+    'Ors.util.Config'
+  ],
 
-    statics: {
+  statics: {
 
-        /** */
-        lang: 'de',
+    /** */
+    lang: 'de',
 
-        /** */
-        limit: 5,
+    /** */
+    limit: 5,
 
-        /** @private */
-        baseUrl: function() {
+    /** @private */
+    baseUrl: function () {
 
-            // avoid null pointer
-            var baseUrl;
-            var config = BasiGX.view.component.Map.guess().appContext.data.merge;
-            if (config.routing && config.routing.photonUrl) {
-                baseUrl = config.routing.photonUrl;
-            } else {
-                Ext.Logger.error('photonUrl is undefined in appContext.json.');
-                return;
-            }
-            if (!baseUrl.endsWith('/')) {
-                baseUrl += '/';
-            }
+      // avoid null pointer
+      var baseUrl;
+      var config = Ors.util.Config.getRoutingConfig();
+      if (config && config.photonUrl) {
+        baseUrl = config.photonUrl;
+      } else {
+        Ext.Logger.error('photonUrl is undefined in appContext.json.');
+        return;
+      }
+      if (!baseUrl.endsWith('/')) {
+        baseUrl += '/';
+      }
 
-            return baseUrl;
-        },
+      return baseUrl;
+    },
 
-        /**
-         * Perform a geocoding operation by an AJAX request.
-         * Return a JS promise resolving on succesful completion of reverse
-         * geocoding call.
-         *
-         * @param {String} queryStr
-         * @param {String} lang
-         * @param {Integer} limit
-         */
-        doGeocoding: function(queryStr, lang, limit) {
-            return new Ext.Promise(function(resolve, reject) {
-                Ext.Ajax.request({
-                    url: Ors.util.Geocoding.baseUrl() + 'api',
-                    method: 'GET',
-                    params: {
-                        q: queryStr,
-                        lang: lang || Ors.util.Geocoding.lang,
-                        limit: limit || Ors.util.Geocoding.limit
-                    },
-                    disableCaching: false, // avoids _dc param (breaks request)
-                    success: function(response) {
-                        var json = Ext.decode(response.responseText);
-                        resolve(json);
-                    },
-                    failure: function(response) {
-                        reject(response.status);
-                    }
-                });
-            });
-        },
+    /**
+     * Perform a geocoding operation by an AJAX request.
+     * Return a JS promise resolving on succesful completion of reverse
+     * geocoding call.
+     *
+     * @param {String} queryStr
+     * @param {String} lang
+     * @param {Integer} limit
+     */
+    doGeocoding: function (queryStr, lang, limit) {
+      return new Ext.Promise(function (resolve, reject) {
+        Ext.Ajax.request({
+          url: Ors.util.Geocoding.baseUrl() + 'api',
+          method: 'GET',
+          params: {
+            q: queryStr,
+            lang: lang || Ors.util.Geocoding.lang,
+            limit: limit || Ors.util.Geocoding.limit
+          },
+          disableCaching: false, // avoids _dc param (breaks request)
+          success: function (response) {
+            var json = Ext.decode(response.responseText);
+            resolve(json);
+          },
+          failure: function (response) {
+            reject(response.status);
+          }
+        });
+      });
+    },
 
-        /**
-         * Perform a reverse geocoding operation by an AJAX request.
-         * Return a JS promise resolving on succesful completion of reverse
-         * geocoding call.
-         *
-         * @param {Number} lon
-         * @param {Number} lat
-         */
-        doReverseGeocoding: function(lon, lat, lang, limit) {
-            return new Ext.Promise(function(resolve, reject) {
-                if (!Ext.isNumber(lon) || !Ext.isNumber(lat)) {
-                    Ext.Logger.warn('Invalid input for reverse geocoding - skip');
-                    reject('Invalid input for reverse geocoding');
-                }
-                Ext.Ajax.request({
-                    url: Ors.util.Geocoding.baseUrl() + 'reverse',
-                    method: 'GET',
-                    params: {
-                        lon: lon,
-                        lat: lat,
-                        lang: lang || Ors.util.Geocoding.lang,
-                        limit: limit || Ors.util.Geocoding.limit
-                    },
-                    disableCaching: false, // avoids _dc param (breaks request)
-                    success: function(response) {
-                        var json = Ext.decode(response.responseText);
-                        resolve(json);
-                    },
-                    failure: function(response) {
-                        Ext.Logger.warn('Geocoding failed', response);
-                        reject('Reverse geocoding failed with status ' +
-                            response.status);
-                    }
-                });
-            });
-        },
-
-        /**
-         * Create a place description using the response of the Photon
-         * API.
-         *
-         * @param {Object} props The location properties of one feature.
-         */
-        createPlaceString: function(props) {
-
-            var placeString = '';
-
-            // street and housenumber
-            if (props.housenumber && props.street) {
-                placeString += props.street + ' ' + props.housenumber;
-            } else if (props.street) {
-                placeString += ', ' + props.street;
-            }
-
-            if (props.name) {
-                placeString += ', ' + props.name;
-            }
-
-            if (props.city) {
-                placeString += ', ' + props.city;
-            }
-
-            if (props.country) {
-                placeString += ', ' + props.country;
-            }
-
-            // remove redundant comma
-            if (placeString.startsWith(', ')) {
-                placeString = placeString.substring(2);
-            }
-
-            return placeString;
+    /**
+     * Perform a reverse geocoding operation by an AJAX request.
+     * Return a JS promise resolving on succesful completion of reverse
+     * geocoding call.
+     *
+     * @param {Number} lon
+     * @param {Number} lat
+     */
+    doReverseGeocoding: function (lon, lat, lang, limit) {
+      return new Ext.Promise(function (resolve, reject) {
+        if (!Ext.isNumber(lon) || !Ext.isNumber(lat)) {
+          Ext.Logger.warn('Invalid input for reverse geocoding - skip');
+          reject('Invalid input for reverse geocoding');
         }
+        Ext.Ajax.request({
+          url: Ors.util.Geocoding.baseUrl() + 'reverse',
+          method: 'GET',
+          params: {
+            lon: lon,
+            lat: lat,
+            lang: lang || Ors.util.Geocoding.lang,
+            limit: limit || Ors.util.Geocoding.limit
+          },
+          disableCaching: false, // avoids _dc param (breaks request)
+          success: function (response) {
+            var json = Ext.decode(response.responseText);
+            resolve(json);
+          },
+          failure: function (response) {
+            Ext.Logger.warn('Geocoding failed', response);
+            reject('Reverse geocoding failed with status ' +
+              response.status);
+          }
+        });
+      });
+    },
+
+    /**
+     * Create a place description using the response of the Photon
+     * API.
+     *
+     * @param {Object} props The location properties of one feature.
+     */
+    createPlaceString: function (props) {
+
+      var placeString = '';
+
+      // street and housenumber
+      if (props.housenumber && props.street) {
+        placeString += props.street + ' ' + props.housenumber;
+      } else if (props.street) {
+        placeString += ', ' + props.street;
+      }
+
+      if (props.name) {
+        placeString += ', ' + props.name;
+      }
+
+      if (props.city) {
+        placeString += ', ' + props.city;
+      }
+
+      if (props.country) {
+        placeString += ', ' + props.country;
+      }
+
+      // remove redundant comma
+      if (placeString.startsWith(', ')) {
+        placeString = placeString.substring(2);
+      }
+
+      return placeString;
     }
+  }
 });

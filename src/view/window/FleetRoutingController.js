@@ -14,10 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.FleetRoutingController
+ * @class Ors.window.FleetRoutingController
  */
-Ext.define('Ors.view.window.FleetRoutingController', {
-  extend: 'Ors.view.window.RoutingController',
+Ext.define('Ors.window.FleetRoutingController', {
+  extend: 'Ors.window.RoutingController',
   alias: 'controller.ors-window-fleet-routing',
   requires: [
     'Ext.Array',

@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.ClassicRoutingModel
+ * @class Ors.window.ClassicRoutingModel
  */
-Ext.define('Ors.view.window.ClassicRoutingModel', {
+Ext.define('Ors.window.ClassicRoutingModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.ors-window-classic-routing',
 
