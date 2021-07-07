@@ -21,12 +21,12 @@ Ext.define('Ors.panel.ElevationProfileModel', {
     alias: 'viewmodel.ors-panel-elevationprofile',
 
     data: {
-        title: '',
-        xLabel: '',
-        distanceLabel: '',
+        title: 'Elevation Profile',
+        xLabel: 'distance',
+        distanceLabel: 'distance',
         distance: undefined,
-        elevationLabel: '',
-        profileSwitcherText: '',
+        elevationLabel: 'elevation',
+        profileSwitcherText: 'Profile',
         displayValue: undefined,
         showIndicatorBox: false,
         routingSummary: undefined,

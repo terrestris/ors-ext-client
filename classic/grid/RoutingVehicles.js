@@ -33,15 +33,15 @@ Ext.define('Ors.grid.RoutingVehicles', {
   viewModel: {
     data: {
       i18n: {
-        title: '',
-        emptyVehiclesText: '',
-        descriptionColumnText: '',
-        startColumnText: '',
-        endColumnText: '',
-        addVehicleTooltip: '',
-        idColumnText: '',
-        downloadTooltip: '',
-        uploadTooltip: ''
+        title: 'Vehicles',
+        emptyVehiclesText: 'No Vehicles',
+        descriptionColumnText: 'Description',
+        startColumnText: 'Start',
+        endColumnText: 'End',
+        addVehicleTooltip: 'Add Vehicle',
+        idColumnText: 'Id',
+        downloadTooltip: 'Download Vehicles',
+        uploadTooltip: 'Upload Vehicles'
       }
     }
   },

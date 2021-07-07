@@ -40,7 +40,7 @@ Ext.define('Ors.panel.MobileRouting', {
   layout: 'vbox',
 
   bind: {
-    title: '{i18n.title}'
+    title: '{i18n.classicRoutingtitle}'
   },
 
   scrollable: 'y',

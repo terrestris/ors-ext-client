@@ -33,7 +33,9 @@
       ]
     },
     "classpath": [
-      "${package.dir}/src"
+      "${package.dir}/../GeoExt/src",
+      "${package.dir}/../BasiGX/src",
+      "${package.dir}/${toolkit.name}"
     ],
     "overrides": [
       "${package.dir}/overrides"
@@ -45,9 +47,30 @@
     },
     "framework": "ext",
     "requires": [
-      "BasiGX",
       "ux"
-    ]
+    ],
+    "builds": {
+      "classic": {
+        "toolkit": "classic",
+        "theme": "theme-triton",
+        "sass": {
+          "generated": {
+            "var": "classic/sass/save.scss",
+            "src": "classic/sass/save"
+          }
+        }
+      },
+      "modern": {
+        "toolkit": "modern",
+        "theme": "theme-material",
+        "sass": {
+          "generated": {
+            "var": "modern/sass/save.scss",
+            "src": "modern/sass/save"
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "test": "npm run lint && npm run test:spec",

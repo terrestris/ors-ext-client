@@ -36,19 +36,19 @@ Ext.define('Ors.window.RoutingJob', {
   viewModel: {
     data: {
       i18n: {
-        title: '',
-        submitText: '',
-        cancelText: '',
-        descriptionLabel: '',
-        descriptionPlaceholder: '',
-        serviceLabel: '',
-        emptyServiceText: '',
-        priorityLabel: '',
-        emptyPriorityText: '',
-        addressLabel: '',
-        addressPlaceholder: '',
-        windowErrorText: '',
-        geocodingErrorText: ''
+        title: 'Job',
+        submitText: 'Apply',
+        cancelText: 'Cancel',
+        descriptionLabel: 'Description',
+        descriptionPlaceholder: 'Description',
+        serviceLabel: 'Service',
+        emptyServiceText: 'Service',
+        priorityLabel: 'Priority',
+        emptyPriorityText: 'Priority',
+        addressLabel: 'Address',
+        addressPlaceholder: 'Address or Coordinates',
+        windowErrorText: 'Window Error',
+        geocodingErrorText: 'Geocoding Error'
       }
     }
   },

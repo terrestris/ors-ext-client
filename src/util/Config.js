@@ -23,19 +23,29 @@ Ext.define('Ors.util.Config', {
   statics: {
 
     getRoutingConfig: function () {
-      var routingWindows = Ext.ComponentQuery.query('ors-window-classic-routing');
-      if (routingWindows.length === 0) {
-        routingWindows = Ext.ComponentQuery.query('ors-window-fleet-routing');
+      if (!Ext.isModern) {
+        var routingWindows = Ext.ComponentQuery.query('ors-window-classic-routing');
         if (routingWindows.length === 0) {
-          routingWindows = Ext.ComponentQuery.query('ors-window-isochrone-routing');
+          routingWindows = Ext.ComponentQuery.query('ors-window-fleet-routing');
+          if (routingWindows.length === 0) {
+            routingWindows = Ext.ComponentQuery.query('ors-window-isochrone-routing');
+          }
         }
-      }
-      var routingWindow = routingWindows[0];
-      if (!routingWindow) {
-        return {};
-      }
+        var routingWindow = routingWindows[0];
+        if (!routingWindow) {
+          return {};
+        }
 
-      return routingWindow.opts;
+        return routingWindow.opts;
+
+      } else {
+        var routingPanel = Ext.ComponentQuery.query('ors-panel-mobilerouting')[0];
+        if (!routingPanel) {
+          return {};
+        }
+        return routingPanel.opts;
+
+      }
     }
 
   }

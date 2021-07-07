@@ -24,8 +24,7 @@ Ext.define('Ors.container.RoutingResultController', {
         'BasiGX.util.Layer',
         'Ors.util.Geocoding',
         'Ors.util.Export',
-        'Ors.util.OpenRouteService',
-        'Ors.panel.ElevationProfile'
+        'Ors.util.OpenRouteService'
     ],
 
     modifyInteraction: undefined,

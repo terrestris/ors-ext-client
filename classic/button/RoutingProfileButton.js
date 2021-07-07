@@ -25,9 +25,9 @@ Ext.define('Ors.button.RoutingProfile', {
   viewModel: {
     data: {
       i18n: {
-        profileCarText: '',
-        profileBicycleText: '',
-        profileWalkingText: ''
+        profileCarText: 'By car',
+        profileBicycleText: 'By bicycle',
+        profileWalkingText: 'By foot'
       },
       routingProfile: undefined
     }

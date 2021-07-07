@@ -34,16 +34,16 @@ Ext.define('Ors.grid.RoutingJobs', {
   viewModel: {
     data: {
       i18n: {
-        title: '',
-        emptyJobText: '',
-        priorityColumnText: '',
-        addressColumnText: '',
-        descriptionColumnText: '',
-        editJobTooltip: '',
-        addJobTooltip: '',
-        removeJobTooltip: '',
-        uploadTooltip: '',
-        downloadTooltip: ''
+        title: 'Jobs',
+        emptyJobText: 'No Jobs',
+        priorityColumnText: 'Priority',
+        addressColumnText: 'Address',
+        descriptionColumnText: 'Description',
+        editJobTooltip: 'Edit Job',
+        addJobTooltip: 'Add Job',
+        removeJobTooltip: 'Remove Job',
+        uploadTooltip: 'Upload Jobs',
+        downloadTooltip: 'Download Jobs'
       }
     }
   },

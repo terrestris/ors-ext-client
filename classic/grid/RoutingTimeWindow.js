@@ -34,13 +34,13 @@ Ext.define('Ors.grid.RoutingTimeWindow', {
   viewModel: {
     data: {
       i18n: {
-        title: '',
-        startDayText: '',
-        endDayText: '',
-        timeText: '',
-        addTimeWindowTooltip: '',
-        removeTimeWindowTooltip: '',
-        emptyGridText: ''
+        title: 'Time Window',
+        startDayText: 'Start Day',
+        endDayText: 'End Day',
+        timeText: 'Time',
+        addTimeWindowTooltip: 'Add Time Window',
+        removeTimeWindowTooltip: 'Remove Time Window',
+        emptyGridText: 'No Time Windows'
       }
     }
   },

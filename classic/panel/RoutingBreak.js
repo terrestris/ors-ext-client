@@ -33,13 +33,13 @@ Ext.define('Ors.panel.RoutingBreak', {
   viewModel: {
     data: {
       i18n: {
-        serviceLabel: '',
-        emptyServiceText: '',
-        descriptionLabel: '',
-        descriptionPlaceholder: '',
-        removeBreakTooltip: '',
-        timeWindowsLabel: '',
-        breakErrorText: ''
+        serviceLabel: 'Service',
+        emptyServiceText: 'Service',
+        descriptionLabel: 'Description',
+        descriptionPlaceholder: 'Description',
+        removeBreakTooltip: 'Remove Break',
+        timeWindowsLabel: 'Time Windows',
+        breakErrorText: 'Break Error'
       }
     }
   },

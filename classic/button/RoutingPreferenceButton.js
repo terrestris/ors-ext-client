@@ -25,9 +25,9 @@ Ext.define('Ors.button.RoutingPreference', {
     viewModel: {
         data: {
             i18n: {
-                fastestText: '',
-                recommendedText: '',
-                shortestText: ''
+                fastestText: 'Fastest',
+                recommendedText: 'Recommended',
+                shortestText: 'Shortest'
             },
             routingPreference: undefined
         }

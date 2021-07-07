@@ -97,7 +97,7 @@ Ext.define('Ors.window.ClassicRoutingController', {
       me.createLayer('waypointStyle', view.waypointLayerName);
 
       if (view.map !== null) {
-        view.map.on('singleclick', me.onWaypointClick, me);
+        view.map.on('singleclick', me.onWaypointClick.bind(me), me);
       }
     }
   },

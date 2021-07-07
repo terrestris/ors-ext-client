@@ -134,7 +134,7 @@ Ext.define('Ors.panel.ElevationProfileController', {
             var distance = 0;
             // radius is equal to the semi-major axis of the WGS84 ellipsoid
             // see also https://openlayers.org/en/v4.6.5/apidoc/ol.Sphere.html
-            var sphere = new ol.Sphere(6378137);
+            var radius = 6378137;
 
             var pointFeatures = [];
             Ext.Array.each(summary.properties.segments, function(segment) {
@@ -147,7 +147,7 @@ Ext.define('Ors.panel.ElevationProfileController', {
 
                         if (i !== 0) {
                             // distance in meters
-                            distance += sphere.haversineDistance(coordinates[i - 1], coordinate);
+                            distance += ol.sphere.getDistance(coordinates[i - 1], coordinate, radius);
                         }
                         var stepDistance = distance;
 

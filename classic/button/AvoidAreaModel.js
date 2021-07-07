@@ -22,19 +22,19 @@ Ext.define('Ors.button.AvoidAreaModel', {
 
     data: {
         i18n: {
-            addAvoidArea: '',
-            uploadGeoJson: '',
-            deleteAvoidArea: '',
-            drawAvoidArea: '',
-            selectAvoidAreaFromLayer: '',
-            errorFileUpload: '',
-            errorUploadedGeometryType: '',
-            errorTooManyFeatures: '',
-            errorUploadedFileExtension: '',
-            errorZeroFeatures: '',
-            errorGetFeatureInfo: '',
-            errorNoLayerFound: '',
-            errorNoPolygonChosen: ''
+            addAvoidArea: 'Avoid Area',
+            uploadGeoJson: 'Upload GeoJSON',
+            deleteAvoidArea: 'Delete Area',
+            drawAvoidArea: 'Draw Area',
+            selectAvoidAreaFromLayer: 'Select Area from Layer',
+            errorFileUpload: 'File Upload Error',
+            errorUploadedGeometryType: 'Geometry Type Error',
+            errorTooManyFeatures: 'Feature Count Error',
+            errorUploadedFileExtension: 'File Extension Error',
+            errorZeroFeatures: 'Zero Features Error',
+            errorGetFeatureInfo: 'Feature Info Error',
+            errorNoLayerFound: 'No Layer Error',
+            errorNoPolygonChosen: 'No Polygon Error'
         },
         deleteAvoidAreaButtonVisible: false
     }

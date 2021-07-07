@@ -32,9 +32,9 @@ Ext.define('Ors.panel.RoutingBreaks', {
   viewModel: {
     data: {
       i18n: {
-        title: '',
-        addBreakTooltip: '',
-        noBreaksText: ''
+        title: 'Routing Breaks',
+        addBreakTooltip: 'Add Break',
+        noBreaksText: 'No Breaks'
       }
     }
   },
