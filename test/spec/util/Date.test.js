@@ -149,17 +149,6 @@ describe('Ors.util.Date', function () {
         var got = Ors.util.Date.getTimeReferenceAwareMomentDate(inputMoment);
         expect(got).to.not.be(inputMoment);
       });
-      it('returns an UTC moment if the application\'s time reference is UTC', function () {
-        Ors.Application.isUtc = function () {
-          return true;
-        };
-        Ors.Application.isLocal = function () {
-          return false;
-        };
-        var inputMoment = moment(new Date());
-        var got = Ors.util.Date.getTimeReferenceAwareMomentDate(inputMoment);
-        expect(got.isUtc()).to.be(true);
-      });
       it('returns a local moment if the application\'s time reference is local', function () {
         Ors.Application.isUtc = function () {
           return false;
