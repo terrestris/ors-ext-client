@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.IsochroneRoutingModel
+ * @class Ors.window.IsochroneRoutingModel
  */
-Ext.define('Ors.view.window.IsochroneRoutingModel', {
+Ext.define('Ors.window.IsochroneRoutingModel', {
   extend: 'Ext.app.ViewModel',
   alias: 'viewmodel.ors-window-isochrone-routing',
 
@@ -40,24 +40,24 @@ Ext.define('Ors.view.window.IsochroneRoutingModel', {
 
   data: {
     i18n: {
-      isochroneRoutingTitle: '',
-      addressLabel: '',
-      addressPlaceholder: '',
-      errorIsochrones: '',
-      errorGeoCoding: '',
-      timeTooltip: '',
-      distanceTooltip: '',
-      submitButtonText: '',
-      rangeFieldText: '',
-      intervalFieldText: '',
-      placeHolderKilometer: '',
-      placeHolderMinutes: '',
-      valueColumn: '',
-      reachfactorColumn: '',
-      visibilityColumn: '',
-      areaColumn: '',
-      intervalTooBigErrorText: '',
-      intervalTooSmallErrorText: ''
+      isochroneRoutingTitle: 'Isochrones',
+      addressLabel: 'Address',
+      addressPlaceholder: 'Address or Coordinates',
+      errorIsochrones: 'Isochrones Error',
+      errorGeoCoding: 'Geocoding Error',
+      timeTooltip: 'Time',
+      distanceTooltip: 'Distance',
+      submitButtonText: 'Compute',
+      rangeFieldText: 'Range',
+      intervalFieldText: 'Interval',
+      placeHolderKilometer: 'km',
+      placeHolderMinutes: 'min',
+      valueColumn: 'Value',
+      reachfactorColumn: 'Reach',
+      visibilityColumn: 'Visibility',
+      areaColumn: 'Area',
+      intervalTooBigErrorText: 'Interval too big',
+      intervalTooSmallErrorText: 'Interval too small'
     },
     // we set the style on each feature,
     // so this should stay undefined

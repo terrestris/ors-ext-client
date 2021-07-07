@@ -21,7 +21,7 @@
 Ext.define('Ors.util.VroomFleetRouting', {
 
   requires: [
-    'BasiGX.view.component.Map',
+    'Ors.util.Config',
     'Ext.Object',
     'Ext.Ajax'
   ],
@@ -30,9 +30,9 @@ Ext.define('Ors.util.VroomFleetRouting', {
 
     /** @private */
     getApiEndpoint: function () {
-      var config = BasiGX.view.component.Map.guess().appContext.data.merge;
-      if (config.routing && config.routing.vroomUrl) {
-        return config.routing.vroomUrl;
+      var config = Ors.util.Config.getRoutingConfig();
+      if (config && config.vroomUrl) {
+        return config.vroomUrl;
       }
       Ext.Logger.error('vroomUrl is not defined in appContext.json');
     },

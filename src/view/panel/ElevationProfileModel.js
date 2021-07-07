@@ -14,19 +14,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.panel.ElevationProfileModel
+ * @class Ors.panel.ElevationProfileModel
  */
-Ext.define('Ors.view.panel.ElevationProfileModel', {
+Ext.define('Ors.panel.ElevationProfileModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.ors-panel-elevationprofile',
 
     data: {
-        title: '',
-        xLabel: '',
-        distanceLabel: '',
+        title: 'Elevation Profile',
+        xLabel: 'distance',
+        distanceLabel: 'distance',
         distance: undefined,
-        elevationLabel: '',
-        profileSwitcherText: '',
+        elevationLabel: 'elevation',
+        profileSwitcherText: 'Profile',
         displayValue: undefined,
         showIndicatorBox: false,
         routingSummary: undefined,

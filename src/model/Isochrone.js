@@ -19,6 +19,10 @@
 Ext.define('Ors.model.Isochrone', {
   extend: 'Ext.data.Model',
 
+  requires: [
+    'Ext.data.Model'
+  ],
+
   fields: [
     { name: 'value', type: 'int', convert: null },
     { name: 'center', convert: null },

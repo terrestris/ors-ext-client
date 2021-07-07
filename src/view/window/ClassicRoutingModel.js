@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.window.ClassicRoutingModel
+ * @class Ors.window.ClassicRoutingModel
  */
-Ext.define('Ors.view.window.ClassicRoutingModel', {
+Ext.define('Ors.window.ClassicRoutingModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.ors-window-classic-routing',
 
@@ -44,26 +44,26 @@ Ext.define('Ors.view.window.ClassicRoutingModel', {
 
     data: {
         i18n: {
-            classicRoutingtitle: '',
-            startFieldTitle: '',
-            viaFieldTitle: '',
-            endFieldTitle: '',
-            addEmptyPoint: '',
-            addStartPoint: '',
-            addViaPoint: '',
-            addEndPoint: '',
-            routingProfileFieldTitle: '',
-            computeRouteButtonText: '',
-            elevationBtnText: '',
-            downloadButtonText: '',
-            errorGeoCoding: '',
-            errorRoutingRequest: '',
-            errorDownloadRoute: '',
-            routingSummaryDetailsButton: '',
-            profileCarText: '',
-            profileBycicleText: '',
-            profileWalkingText: '',
-            routesHeading: ''
+            classicRoutingtitle: 'Routing',
+            startFieldTitle: 'From',
+            viaFieldTitle: 'Via',
+            endFieldTitle: 'To',
+            addEmptyPoint: 'Add waypoint',
+            addStartPoint: 'Add startpoint',
+            addViaPoint: 'Add viapoint',
+            addEndPoint: 'Add endpoint',
+            routingProfileFieldTitle: 'Profile',
+            computeRouteButtonText: 'Compute',
+            elevationBtnText: 'Elevation Profile',
+            downloadButtonText: 'Download',
+            errorGeoCoding: 'Geocoding Error',
+            errorRoutingRequest: 'Routing Error',
+            errorDownloadRoute: 'Download Error',
+            routingSummaryDetailsButton: 'Details',
+            profileCarText: 'By car',
+            profileBycicleText: 'By bicycle',
+            profileWalkingText: 'By foot',
+            routesHeading: 'Routes'
         },
         routingProfile: 'driving-car',
         routingPreference: 'recommended',

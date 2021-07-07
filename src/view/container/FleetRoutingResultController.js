@@ -14,10 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.container.FleetRoutingResultController
+ * @class Ors.container.FleetRoutingResultController
  */
-Ext.define('Ors.view.container.FleetRoutingResultController', {
-  extend: 'Ors.view.container.RoutingResultController',
+Ext.define('Ors.container.FleetRoutingResultController', {
+  extend: 'Ors.container.RoutingResultController',
   alias: 'controller.ors-container-fleetroutingresult',
 
   requires: [

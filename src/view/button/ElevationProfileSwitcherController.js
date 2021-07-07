@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.button.ElevationProfileSwitcherController
+ * @class Ors.button.ElevationProfileSwitcherController
  */
-Ext.define('Ors.view.button.ElevationProfileSwitcherController', {
+Ext.define('Ors.button.ElevationProfileSwitcherController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.ors-button-elevationprofileswitcher',
 

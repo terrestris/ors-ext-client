@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 /**
- * @class Ors.view.container.RoutingResultController
+ * @class Ors.container.RoutingResultController
  */
-Ext.define('Ors.view.container.RoutingResultController', {
+Ext.define('Ors.container.RoutingResultController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.ors-container-routingresult',
 
@@ -24,8 +24,7 @@ Ext.define('Ors.view.container.RoutingResultController', {
         'BasiGX.util.Layer',
         'Ors.util.Geocoding',
         'Ors.util.Export',
-        'Ors.util.OpenRouteService',
-        'Ors.view.panel.ElevationProfile'
+        'Ors.util.OpenRouteService'
     ],
 
     modifyInteraction: undefined,
@@ -886,7 +885,7 @@ Ext.define('Ors.view.container.RoutingResultController', {
      * This removes all existing items in the south-container
      * prior to adding the elevation profile panel.
      *
-     * @returns {Ors.view.panel.ElevationProfile}
+     * @returns {Ors.panel.ElevationProfile}
      */
     addElevationPanel: function() {
         var me = this;
@@ -895,7 +894,7 @@ Ext.define('Ors.view.container.RoutingResultController', {
             return;
         }
 
-        var elevationPanel = Ext.create('Ors.view.panel.ElevationProfile', {
+        var elevationPanel = Ext.create('Ors.panel.ElevationProfile', {
             name: view.elevationProfilePanelName,
             routeLayerName: view.routeLayerName,
             elevationLayerName: view.elevationLayerName
