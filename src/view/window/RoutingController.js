@@ -327,7 +327,7 @@ Ext.define('Ors.window.RoutingController', {
             color: routingOpts.elevationStyle.color
           }),
           textBaseline: 'bottom',
-          offsetY: -17
+          offsetY: -19
 
         })
       }), new ol.style.Style({
@@ -338,7 +338,7 @@ Ext.define('Ors.window.RoutingController', {
             color: routingOpts.elevationStyle.fill
           }),
           textBaseline: 'bottom',
-          offsetY: -17
+          offsetY: -19
         })
       })];
       vm.set('elevationStyle', elevationStyle);
