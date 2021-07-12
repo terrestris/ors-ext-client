@@ -120,7 +120,7 @@ Ext.define('Ors.window.FleetRoutingController', {
     var jobMarkerStyleColorUnassigned = 'gray';
 
     if (routingOpts.jobMarkerStyle) {
-      if (routingOpts.jobMarkerStyle.markerSize) {
+      if (routingOpts.jobMarkerStyle.markerSize !== undefined) {
         jobMarkerStyleSize = routingOpts.jobMarkerStyle.markerSize;
       }
       if (routingOpts.jobMarkerStyle.color) {

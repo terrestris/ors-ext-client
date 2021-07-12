@@ -41,6 +41,7 @@ Ext.define('Ors.window.IsochroneRoutingModel', {
   data: {
     i18n: {
       isochroneRoutingTitle: 'Isochrones',
+      addCenterContextText: 'Set center',
       addressLabel: 'Address',
       addressPlaceholder: 'Address or Coordinates',
       errorIsochrones: 'Isochrones Error',
